@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        img{
+            height: 1000px;
+            
+        }
+        #my-p{
+            font-size: 53px;
+            color: red;
+        }
+        .my-p{
+            font-size: 53px;
+            color: red;
+        }
+
+        .parent{
+            width: 400px;
+            height: 200px;
+            background-color: rgb(241, 148, 8);
+        }
+
+        .child{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(230, 11, 11);
+        }
+
+        button{
+            border: none;
+            background-color: #fc7f03;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover{
+            background-color: #673300;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>HTML Tags</h1>
+
+    <div class="parent" >
+        <div class="child" ></div>
+    </div>
+    
+    <h1 class="my-p" >This is heading one</h1>
+    <h2>This is heading two</h2>
+    <h3>This is heading three</h3>
+    <h4>This is heading four</h4>
+    <h5>This is heading five</h5>
+    <h6>This is heading six</h6>
+
+    <p class="my-p" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero placeat tempora asperiores quae ab omnis maiores ipsam veniam, ea delectus praesentium non ut culpa excepturi magnam nemo, saepe molestiae? <br> Dolores?</p>
+
+    <p class="my-p"  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat laudantium repudiandae harum porro, suscipit minima reiciendis. In deserunt repellat sint repudiandae laudantium tempora amet eaque atque inventore eligendi? Nam, iste?</p>
+
+    <h2>List</h2>
+    <h3>Ordered List</h3>
+    <ol>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+        <li>Item three</li>
+    </ul>
+
+    <h1>Welcome to my Website. <br> This is the #1 website</h1>
+
+    <p>This is just a preview of some very very long long long text. But if you want to view more, </p>
+
+    <a  target="_blank" href="https://google.com">Click here</a> <br>
+
+    
+    <img src="image.jpg" alt="This is an alt text">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTh5n6Dz7fr6gOHGNXJQVOFB6yQ6MlF-9kclw&s">
+
+    <button>This is a button</button>
+
+    <table border="1" >
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Maria</td>
+                <td>14</td>
+                <td>F</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <form>
+        <h2>This is my form</h2>
+
+        <div>
+            <label for="name">Name</label>
+            <br>
+            <input id="name" type="text" required>
+        </div>
+
+        <br><br>
+        <div>
+            <label for="email">Your Email</label>
+            <br>
+            <input id="email" type="email">
+        </div>
+        <br><br>
+        <div>
+            <label for="password">Your Password</label>
+            <br>
+            <input id="password" type="password">
+        </div>
+        <br><br>
+        <div>
+            <label for="number">Your Number</label>
+            <br>
+            <input id="number" type="number">
+        </div>
+        <br><br>
+
+        <div>
+            <label for="v1">Your Image</label>
+            <br>
+            <input id="v1" type="file">
+        </div>
+        <br><br>
+
+        <div>
+            <label for="dob">Date of birth</label>
+            <br>
+            <input id="dob" type="date">
+        </div>
+        <br><br>
+
+        <div>
+            <label for="color">Color</label>
+            <br>
+            <input id="color" type="color">
+        </div>
+        
+        <br><br>
+
+        <div>
+            <input type="checkbox" id="agree">
+            <label for="agree">Do you agree with the terms and services?</label>
+        </div>
+        <br><br>
+
+        <div>
+            <p>Choose gender</p>
+            <input type="radio" id="male" name="gender">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender">
+            <label for="female">Female</label>
+        </div>
+        <div>
+            <p>Choose your color</p>
+            <input type="radio" id="white" name="color">
+            <label for="white">White</label>
+            <input type="radio" id="black" name="color">
+            <label for="black">Black</label>
+        </div>
+
+        <div>
+            <label for="year">Choose your year of study</label>
+        <select name="year" id="year">
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+        </select>
+        </div>
+
+        <div>
+            <textarea cols="50" rows="10" name="" id=""></textarea>
+        </div>
+
+        
+
+
+        <input type="submit" value="Submit the form">
+
+
+
+    </form>
+
+    <button>This is my button</button>
+
+    
+
+</body>
+</html>
