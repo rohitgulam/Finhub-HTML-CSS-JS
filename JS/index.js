@@ -99,3 +99,48 @@ var myUser = {
 
 // console.log( 2 * 2 + 10);
 
+// Equality Operators - Check 
+
+// Check is something is Equal - == / ===
+
+// == is for checking value only 
+// === is for checking value and type 
+
+// console.log(2 == 2); // True 
+// console.log(2 == 4); // false 
+// console.log(2 === "2"); // False
+
+// Not Equal !=
+
+// console.log(2 != 2); // False
+// console.log(2 != 3); // True 
+
+// Greater than >
+
+// console.log(3 > 3); // false
+// console.log(3 > 1); // true
+
+// Greater than >=
+
+// console.log(3 >= 3); // true
+
+// Less than < 
+
+// console.log(2 < 1); // false
+// console.log(10 < 100) // True;
+
+
+// Less than <=
+// console.log(2 <= 2); // false
+// console.log(10 <= 100) // True;
+
+
+// Combining 
+
+// AND - &&
+// OR - ||
+
+// var x = 100
+
+// console.log( x <= 3 && x >= -3 || x === 100);
+
