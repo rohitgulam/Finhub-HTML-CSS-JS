@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do App</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -19,11 +20,17 @@
         <hr >
         <div id="todo-list-items" >
             <div class="todo-list-item" >
-                <input type="checkbox" id="checkbox-1">
-                <p>Create a new desing</p>
+                <div class="todo-list-item-name" >
+                    <input class="checkbox" type="checkbox" id="checkbox-1">
+                    <p class="todo-title" >Create a new desing</p>
+                </div>
                 <div>
-                    <button class="icon">Edit</button>
-                    <button class="icon">Delete</button>
+                    <button class="icon">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button class="icon">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
                 </div>
             </div>
         </div>
