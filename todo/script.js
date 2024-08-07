@@ -4,10 +4,10 @@ const input = document.getElementById('input');
 // THE PARENT FOR ALL ITEMS 
 const listItems = document.getElementById('todo-list-items');
 
-
-
 const todoItems = [];
 
+var deleteBtns = []
+var editBtns = []
 
 // console.log(listItems);
 
@@ -15,13 +15,16 @@ const todoItems = [];
 form.addEventListener('submit', saveItem);
 
 
+displayItems()
+
 function saveItem (e) {
     e.preventDefault()
     todoItems.push(input.value)
     input.value = '';
     console.log(todoItems)
-
     displayItems()
+    updateDeleteBtns()
+    
 }
 
 
@@ -51,7 +54,7 @@ function displayItems(){
         
         todoListItemNameDiv.appendChild(todoTitleParagraph)
         
-        console.log(todoListItemNameDiv);
+        // console.log(todoListItemNameDiv);
         
         
         
@@ -64,6 +67,8 @@ function displayItems(){
         // Buttons 
         var editButton = document.createElement('button')
         editButton.classList.add('icon')
+        editButton.classList.add('edit')
+        editButton.id = `edit-${i}`;
         
         // Child of Button
         var editIcon = document.createElement('i');
@@ -76,6 +81,9 @@ function displayItems(){
         
         var deleteButton = document.createElement('button')
         deleteButton.classList.add('icon')
+        deleteButton.classList.add('delete')
+        deleteButton.id = `delete-${i}`;
+
         
         var deleteIcon = document.createElement('i');
         deleteIcon.classList.add('fa-solid')
@@ -99,4 +107,55 @@ function displayItems(){
     
 }
 
-displayItems()
+function updateDeleteBtns () {
+    deleteBtns = document.querySelectorAll('.delete');
+
+    console.log('deleteBtns');
+    console.log(deleteBtns);
+    
+
+    for (i = 0; i <= deleteBtns.length - 1; i++){
+        deleteBtns[i].addEventListener('click', deleteItem)
+    }
+}
+
+function updateEditBtns () {
+    editBtns = document.querySelectorAll('.edit');
+
+    // console.log('deleteBtns');
+    // console.log(deleteBtns);
+    
+
+    for (i = 0; i <= editBtns.length - 1; i++){
+        editBtns[i].addEventListener('click', editItem)
+    }
+}
+
+
+function deleteItem(e){
+
+    const clickedItem = e.target.id
+
+    const itemIndex = clickedItem.split('-')[1]
+
+    todoItems.splice(itemIndex, 1);
+    
+    displayItems()
+    updateDeleteBtns()
+    
+}
+
+function editItem(e){
+
+    const clickedItem = e.target.id
+
+    const itemIndex = clickedItem.split('-')[1]
+
+    todoItems[itemIndex]
+
+    console.log(itemIndex);
+    
+    
+}
+
+
