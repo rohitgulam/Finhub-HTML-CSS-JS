@@ -1,4 +1,18 @@
-<script></script>
+<script setup>
+import {ref} from 'vue';
+
+var taskInput = ref('');
+
+
+// console.log(input.value);
+
+function submitForm() {
+console.log(taskInput.value);
+
+}
+
+
+</script>
 
 <template>
 
@@ -6,8 +20,8 @@
 <div class="container" >
         <h1>To Do App</h1>
 
-        <form id="input-form">
-            <input type="text" name="input" id="input" placeholder="Enter your task here.....">
+        <form v-on:submit.prevent="submitForm" id="input-form">
+            <input v-model="taskInput" type="text" name="input" id="input" placeholder="Enter your task here.....">
             <button type="submit">
                 <i class="fa-solid fa-plus"></i>
             </button>
