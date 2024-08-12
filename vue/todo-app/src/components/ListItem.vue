@@ -8,6 +8,10 @@ defineProps({
     }
 })
 
+const emit = defineEmits([
+    'edit',
+    'delete'
+])
 </script>
 
 <template>
@@ -21,8 +25,8 @@ defineProps({
                     </p>
                 </div>
                 <div class="button-group" >
-                    <IconButton iconClass="fa-pencil" />            
-                    <IconButton iconClass="fa-trash" />            
+                    <IconButton @click="$emit('edit')" iconClass="fa-pencil" />            
+                    <IconButton @click="$emit('delete')" iconClass="fa-trash" />            
                     <!-- <IconButton icon-class="fa-trash" /> -->
                 </div>
                 <!-- <div>
@@ -39,5 +43,26 @@ defineProps({
 <style scoped>
 .button-group {
     display: flex;
+}
+
+.todo-list-item{
+    background-color: #DBE2EF;
+    border-radius: 5px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.todo-list-item-name{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+.todo-title{
+    font-size: 22px;
 }
 </style>

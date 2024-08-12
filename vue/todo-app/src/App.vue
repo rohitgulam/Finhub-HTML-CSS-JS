@@ -1,6 +1,7 @@
 <script setup>
 import {ref} from "vue";
 import ListItem from "./components/ListItem.vue";
+import ListItemCard from "./components/ListItemCard.vue";
 
 
 // Vue JS
@@ -73,11 +74,39 @@ function editItem(index) {
         </form>
 
         <hr >
-        <div id="todo-list-items" >
+        <div style="width: 100%;" >
             
+
+            <ListItemCard>
+                <ListItem 
+                    v-for="(item, index) in itemsArray" 
+                    :key="index" 
+                    :itemName="item" 
+                    @edit="editItem(index)"
+                    @delete="deleteItem(index)"
+                />
+            </ListItemCard>
+
             <!-- <ListItem></ListItem> -->
-            <ListItem itemName="Item one" />
-            <ListItem itemName="Item two" />
+            
+
+            <!-- <div class="todo-list-item"  >
+                <div class="todo-list-item-name" >
+                    <p 
+                    class="todo-title" >
+                      {{ item }}
+                      {{ index }}
+                    </p>
+                </div>
+                <div>
+                    <button @click="editItem(index)" id="edit" class="icon edit">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button v-on:click="deleteItem(index)" id="delete" class="icon delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div> -->
 
 
 
@@ -157,37 +186,6 @@ h1 {
     cursor: pointer;
 }
 
-#todo-list-items {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.todo-list-item{
-    background-color: #DBE2EF;
-    border-radius: 5px;
-    padding: 10px 20px;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.todo-list-item-name{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-
-}
-
-.checkbox{
-    height: 20px;
-    width: 20px;
-}
-
-.todo-title{
-    font-size: 22px;
-}
 
 .icon{
     background-color: transparent;
