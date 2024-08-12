@@ -1,8 +1,5 @@
 <script setup>
 import {ref} from "vue";
-import ListItem from "./components/ListItem.vue";
-
-
 // Vue JS
 var taskInput = ref('');
 
@@ -74,11 +71,23 @@ function editItem(index) {
 
         <hr >
         <div id="todo-list-items" >
-            
-            <!-- <ListItem></ListItem> -->
-            <ListItem itemName="Item one" />
-            <ListItem itemName="Item two" />
-
+            <div class="todo-list-item" v-for="(item, index) in itemsArray" :key="index" >
+                <div class="todo-list-item-name" >
+                    <p 
+                    class="todo-title" >
+                      {{ item }}
+                      <!-- {{ index }} -->
+                    </p>
+                </div>
+                <div>
+                    <button @click="editItem(index)" id="edit" class="icon edit">
+                        <i class="fa-solid fa-pencil"></i>
+                    </button>
+                    <button v-on:click="deleteItem(index)" id="delete" class="icon delete">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
+            </div>
 
 
 
